@@ -1,14 +1,45 @@
 import type { Award } from '~/types';
 
 export const awards: Award[] = [
-  { year: '2026', title: 'Independent of the Year', detail: 'Design Council annual, art direction category', tag: 'Winner' },
-  { year: '2025', title: 'Interface of the Month', detail: 'For the Petrichor reporting rebuild', tag: 'Feature' },
-  { year: '2025', title: 'Accessibility Merit', detail: 'Undergrove checkout, WCAG 2.2 AA audit passed', tag: 'Merit' },
-  { year: '2024', title: 'Rebrand of the Year', detail: 'Regional Brand Awards, shortlisted from 410 entries', tag: 'Finalist' },
-  { year: '2023', title: 'Speaker, Type & Interface', detail: 'Talk: designing the states nobody screenshots', tag: 'Talk' },
+  {
+    year: '2026',
+    title: 'AI Fluency Framework & Foundations',
+    detail: 'Anthropic — structured AI workflows and operational fluency',
+    tag: 'Certified',
+  },
+  {
+    year: '2025',
+    title: 'Certified Scrum Master (CSM)',
+    detail: 'Scrum Alliance — Agile delivery & team facilitation (2025–2027)',
+    tag: 'Scrum Alliance',
+  },
+  {
+    year: '2023',
+    title: 'Product Roadmapping Micro-Certification (PRC™)',
+    detail: 'Product School — strategic roadmapping & prioritization',
+    tag: 'Product School',
+  },
+  {
+    year: '2023',
+    title: 'Agile, Predictive & Generative AI PM',
+    detail: 'Project Management Institute (PMI) — core PM & GenAI tracks',
+    tag: 'PMI',
+  },
+  {
+    year: '2023',
+    title: 'Scrum Foundation Professional Certificate (SFPC)',
+    detail: 'CertiProf — Scrum framework & empirical delivery',
+    tag: 'CertiProf',
+  },
+  {
+    year: '2020',
+    title: 'B.S., Computer Science',
+    detail: 'University of Karachi — software engineering foundations',
+    tag: 'Degree',
+  },
 ];
 
 export const awardsHeading = {
-  eyebrow: 'The shelf',
-  title: 'Occasionally somebody notices.',
+  eyebrow: 'Credentials',
+  title: 'Certifications & formal foundations.',
 };
