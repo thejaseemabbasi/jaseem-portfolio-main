@@ -1,47 +1,36 @@
-/**
- * Copy blocks for the homepage sections that are one-of-a-kind.
- * Longer, repeating content lives in its own data file or content
- * collection instead.
- */
-
 export const hero = {
   greeting: 'Hello. The name is',
   /** Rendered on two lines. */
-  nameLines: ['Robin', 'Vale'],
+  nameLines: ['Jaseem', 'Abbasi'],
   intro:
-    'I art-direct and design for teams who already know what they are building, and need it to feel like one thing instead of forty.',
-  ctaLabel: 'Book a call',
+    'I lead enterprise CMS, mobile, web, and game programs from early scoping to launch—aligning engineering, product, and executive stakeholders across MENA, North America, and Europe.',
+  ctaLabel: 'Get in touch',
   ctaHref: '/contact/',
   photo: {
     src: '/images/hero-portrait.webp',
-    alt: 'Robin Vale, art director, photographed against a plain studio wall',
+    alt: 'Jaseem Abbasi, Technical Project, Product and Delivery Manager',
     width: 960,
     height: 1210,
   },
   aside: {
-    roleLine: ['Independent of the Year 2026', 'Art Direction & Interface'],
-    title: ['Art', 'Direction'],
+    roleLine: ['Certified Scrum Master (CSM)', 'Project & Product Delivery'],
+    title: ['Program', 'Delivery'],
     /** Small avatar stack — decorative, so the images carry empty alt text. */
     stack: ['/images/avatar-02.webp', '/images/avatar-01.webp', '/images/avatar-03.webp'],
-    stackBadge: '98%',
-    kpi: '210+',
-    kpiLabel: 'launches behind me',
-    note: 'Working across nine time zones',
+    stackBadge: '$1M+',
+    kpi: '6+',
+    kpiLabel: 'years leading delivery',
+    note: 'Serving MENA, North America & Europe',
   },
 };
 
 export const collaborate = {
   eyebrow: 'Working together',
-  title: 'Most of my work arrives as a half-finished thing somebody is quietly worried about.',
-  body: 'Send me yours and I will tell you what I would do with it — honestly, and before there is any question of an invoice. If it is not a fit, I will name someone who is.',
-  badge: 'Independent since 2011',
-  ctaLabel: 'Send me the brief',
+  title: 'Most engagements begin with an ambitious scope that needs clear ownership.',
+  body: 'Share your roadmap, hiring brief, or delivery bottleneck—I will give you a straightforward perspective on scope, risks, and how I would structure execution across your team.',
+  badge: 'Delivery since 2020',
+  ctaLabel: 'Start a conversation',
   ctaHref: '/contact/',
-  /**
-   * The staggered pair beside the copy. Swap these for the bundled SVG
-   * mockups (`BookletMock`, `TabletMock` in src/components/art/) if you would
-   * rather show artwork than photography — see the README.
-   */
   images: [
     {
       src: '/images/collab-team.webp',
@@ -60,48 +49,48 @@ export const collaborate = {
 
 export const about = {
   eyebrow: 'Background',
-  title: 'Forty projects taught me the same lesson forty times.',
-  body: 'I spent my twenties inside agencies making things look expensive. Somewhere around the fourth rebrand that never shipped, I started asking what the work was actually for. These days I take fewer clients, ask the awkward questions in week one, and stay until the thing is live.',
+  title: 'Six years across agency, enterprise, and product teams taught me what actually ships.',
+  body: 'Across Technyx Systems, OVRLOD, and CUBIX, I have governed $1M+ Sitecore and Optimizely DXP transformations, mobile marketplaces, and live game builds. I focus on clear WBS baselines, honest risk escalation, and Agile cadences that let engineering and QA move without friction.',
   points: [
-    'I read your support inbox before I open a design file.',
-    'One senior person on the work from first call to launch — nothing gets passed down.',
-    'If I think the project is the wrong project, you hear it before you pay me.',
+    'I establish scope, cost baselines, and SLA boundaries before sprint one.',
+    'Hands-on delivery governance—never passive status chasing.',
+    'If a timeline or dependency puts launch at risk, leadership hears it early with a mitigation plan.',
   ],
   image: {
     src: '/images/about-studio.webp',
-    alt: 'Designers arranging sticky notes and printed layouts across a studio table',
+    alt: 'Team reviewing project milestones and sprint plans at a table',
     width: 900,
     height: 954,
   },
   badge: {
-    value: '15',
-    label: 'Years working independently, almost always with teams of under twenty people.',
+    value: '6+',
+    label: 'Years leading cross-functional web, mobile, CMS, and game teams of up to 25+ specialists.',
   },
   ctaLabel: 'See the work',
   ctaHref: '/work/',
 };
 
 export const servicesHeading = {
-  eyebrow: 'Engagements',
-  title: 'Six ways to put me to work.',
-  ctaLabel: 'Ask for a scope',
+  eyebrow: 'Capabilities',
+  title: 'How I support product and engineering teams.',
+  ctaLabel: 'Discuss a role or scope',
   ctaHref: '/contact/',
 };
 
 export const workHeading = {
   eyebrow: 'Selected work',
-  title: 'Six projects, six different arguments.',
+  title: 'Programs delivered across enterprise, mobile, and games.',
 };
 
 export const journalHeading = {
-  eyebrow: 'Notebook',
-  title: 'Things I keep having to explain.',
+  eyebrow: 'Journal',
+  title: 'Notes on delivery, governance, and AI operations.',
   ctaLabel: 'Every article',
   ctaHref: '/journal/',
 };
 
 export const cta = {
-  title: 'Have you got something that deserves doing properly?',
-  body: 'Tell me what is broken, who it is breaking for, and what happens if it stays that way. That is enough for me to come back with a scope and a number.',
-  primaryLabel: 'Send the brief',
+  title: 'Ready to bring structure to your next initiative?',
+  body: 'Whether you are hiring a Technical Project Manager, Scrum Master, or Product Manager—or need steady delivery leadership for an upcoming build—let’s connect.',
+  primaryLabel: 'Get in touch',
 };
