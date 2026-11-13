@@ -1,57 +1,40 @@
 import type { SiteConfig } from '~/types';
 
-/**
- * ============================================================
- *  THE ONE FILE TO EDIT FIRST
- * ============================================================
- *
- * Everything here is demo content. Replace it with your own and the
- * header, footer, hero, contact page, metadata, structured data, RSS
- * feed and sitemap all follow.
- *
- * The canonical URL lives in `astro.config.mjs` (`site`) and is read
- * back here through `import.meta.env.SITE`.
- */
 export const siteConfig: SiteConfig = {
-  name: 'SWP Freelancer Portfolio',
+  name: 'Jaseem Abbasi',
 
   logo: {
     header: { src: '/images/header-logo.webp', width: 164, height: 58 },
     footer: { src: '/images/footer-logo.webp', width: 164, height: 58 },
   },
 
-  author: 'Robin Vale',
-  role: 'Art direction & interface design',
-  title: 'SWP Freelancer Portfolio — Art direction & interface design',
+  author: 'Jaseem Abbasi',
+  role: 'Technical Project, Product & Delivery Manager',
+  title: 'Jaseem Abbasi — Technical Project, Product & Delivery Manager',
   description:
-    'Portfolio of Robin Vale, an independent art director and interface designer working with small product teams on identity, interface and design systems.',
-  url: import.meta.env.SITE ?? 'https://swp-freelancer-portfolio.vercel.app',
+    'Portfolio of Jaseem Abbasi, a Technical Project Manager, Certified Scrum Master, and Product Manager with six years of experience leading enterprise CMS, mobile, web, and game programs across MENA, North America, and Europe.',
+  url: import.meta.env.SITE ?? 'https://thejaseemabbasi.com',
   ogImage: '/og-default.png',
   locale: 'en',
   themeColor: '#c8f14d',
 
   contact: {
-    email: 'hello@example.com',
-    phone: '+1 (000) 555-0100',
-    phoneHref: '+10005550100',
-    location: 'Remote — working across nine time zones',
-    availability: 'Two project slots open from September',
-    // Paste a Formspree / Web3Forms / Netlify endpoint here to make the
-    // contact form live. See "Contact form" in the README.
+    email: 'thejaseemabbasi@gmail.com',
+    phone: '+92 333 1335258',
+    phoneHref: '+923331335258',
+    location: 'Karachi, Pakistan — Remote across MENA, US & EU',
+    availability: 'Available for Senior PM, Scrum & Product Leadership',
     formEndpoint: '',
   },
 
   social: [
-    { label: 'Dribbble', href: 'https://dribbble.com/', icon: 'dribbble' },
-    { label: 'Behance', href: 'https://www.behance.net/', icon: 'behance' },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/', icon: 'linkedin' },
-    { label: 'Instagram', href: 'https://www.instagram.com/', icon: 'instagram' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/jaseemabbasi/', icon: 'linkedin' },
   ],
 
   about:
-    'An independent art direction and design practice for teams of under twenty. Fewer clients, harder questions early, and a handover that does not quietly depend on me.',
+    'Technical Project Manager, Certified Scrum Master, and Product Manager with six years of experience governing enterprise CMS, mobile, web, and game deliveries from scope to launch.',
 
-  copyrightHolder: 'SWP Freelancer Portfolio',
+  copyrightHolder: 'Jaseem Abbasi',
 };
 
 export default siteConfig;
