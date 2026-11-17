@@ -10,6 +10,14 @@ const services = (await getCollection('services'))
   .sort((a, b) => a.data.order - b.data.order)
   .slice(0, 5);
 
+const certBadges = [
+  { code: 'CSM', issuer: 'Scrum Alliance', href: 'https://www.linkedin.com/in/jaseemabbasi/details/certifications/' },
+  { code: 'AI Fluency', issuer: 'Anthropic', href: 'https://www.linkedin.com/in/jaseemabbasi/details/certifications/' },
+  { code: 'PRC™', issuer: 'Product School', href: 'https://www.linkedin.com/in/jaseemabbasi/details/certifications/' },
+  { code: 'PMI', issuer: 'Agile & GenAI', href: 'https://www.credly.com/users/jaseem-abbasi/badges/credly' },
+];
+
+const legalLinks = footerNav.legal.filter((l) => l.label.toLowerCase() !== 'rss');
 const year = new Date().getFullYear();
 ---
 
@@ -27,11 +35,18 @@ const year = new Date().getFullYear();
         />
       </a>
       <p class="ftr-about">{siteConfig.about}</p>
-      <div class="ftr-soc">
+      <div class="ftr-certs" aria-label="Certifications">
         {
-          siteConfig.social.map((s) => (
-            <a href={s.href} aria-label={s.label} rel="noopener noreferrer" target="_blank">
-              <Icon name={s.icon} class="ic-sm" />
+          certBadges.map((b) => (
+            <a
+              class="ftr-cert"
+              href={b.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={`${b.code} — ${b.issuer}`}
+            >
+              <span class="ftr-cert-code">{b.code}</span>
+              <span class="ftr-cert-issuer">{b.issuer}</span>
             </a>
           ))
         }
@@ -66,13 +81,59 @@ const year = new Date().getFullYear();
         <Icon name="pin" class="ic-sm" />
         <span>{siteConfig.contact.location}</span>
       </div>
+      <div class="ftr-soc" style="margin-top: 14px;">
+        {
+          siteConfig.social.map((s) => (
+            <a href={s.href} aria-label={s.label} rel="noopener noreferrer" target="_blank">
+              <Icon name={s.icon} class="ic-sm" />
+            </a>
+          ))
+        }
+      </div>
     </div>
   </div>
 
   <div class="wrap ftr-bot">
-    <p>&copy; {year} {siteConfig.copyrightHolder} &mdash; an Astro portfolio theme.</p>
+    <p>&copy; {year} {siteConfig.copyrightHolder}.</p>
     <nav aria-label="Legal">
-      {footerNav.legal.map((l) => <a href={l.href}>{l.label}</a>)}
+      {legalLinks.map((l) => <a href={l.href}>{l.label}</a>)}
     </nav>
   </div>
 </footer>
+
+<style>
+  .ftr-certs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .ftr-cert {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.04);
+    font-size: 12px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+
+  .ftr-cert:hover {
+    border-color: #c8f14d;
+    background: rgba(200, 241, 77, 0.08);
+  }
+
+  .ftr-cert-code {
+    font-weight: 700;
+    color: #c8f14d;
+  }
+
+  .ftr-cert-issuer {
+    color: rgba(255, 255, 255, 0.72);
+  }
+</style>
