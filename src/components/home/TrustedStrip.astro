@@ -2,17 +2,43 @@
 import { clients, clientsLabel } from '~/data/clients';
 ---
 
-<section class="wrap trust" aria-label="Selected clients">
+<section class="wrap trust" aria-label="Selected clients and platforms">
   <div class="trust-in">
     <p class="trust-lbl">{clientsLabel}</p>
     <div class="marquee">
       <div class="marquee-track" id="mtrack">
         {
           clients.map((client) => (
-            <span class="plogo">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" set:html={client.shape} />
+            <a
+              class="plogo"
+              href={client.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration:none;color:inherit;"
+            >
+              {client.logo ? (
+                <img
+                  src={client.logo}
+                  alt=""
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                  style="width:20px;height:20px;object-fit:contain;border-radius:4px;"
+                />
+              ) : (
+                client.shape && (
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    aria-hidden="true"
+                    set:html={client.shape}
+                  />
+                )
+              )}
               {client.name}
-            </span>
+            </a>
           ))
         }
       </div>
@@ -21,8 +47,6 @@ import { clients, clientsLabel } from '~/data/clients';
 </section>
 
 <script>
-  /* The track is duplicated so the -50% translate loops seamlessly.
-     Doing it here keeps the markup free of duplicated content. */
   const track = document.getElementById('mtrack');
   if (track && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const clone = track.cloneNode(true) as HTMLElement;
