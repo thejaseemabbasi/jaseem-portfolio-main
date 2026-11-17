@@ -1,18 +1,41 @@
 import type { Client } from '~/types';
 
-/**
- * Logos for the marquee strip. Each entry draws on a 24×24 viewBox with
- * `fill="none" stroke="currentColor" stroke-width="1.8"`, so a simple
- * path or a couple of shapes is all you need.
- */
 export const clients: Client[] = [
-  { name: 'Zayed National Museum', shape: '<path d="M4 20h16M6 20V9l6-5 6 5v11"/>' },
-  { name: 'ADGM', shape: '<circle cx="12" cy="12" r="9"/><path d="M12 3v18"/>' },
-  { name: 'Abu Dhabi Finance Week', shape: '<path d="M4 20 12 4l8 16z"/>' },
-  { name: 'WAGMI Games', shape: '<path d="M12 3.5 20 12l-8 8.5L4 12z"/>' },
-  { name: 'LMCC', shape: '<rect x="4" y="4" width="16" height="16" rx="5"/><path d="M9 12h6"/>' },
-  { name: 'Direct Macro', shape: '<circle cx="9" cy="12" r="5.5"/><circle cx="15" cy="12" r="5.5"/>' },
-  { name: 'PartyShark', shape: '<circle cx="12" cy="12" r="8.5"/><path d="M7 12h10M12 7v10"/>' },
+  {
+    name: 'Zayed National Museum',
+    href: 'https://zayednationalmuseum.ae/en/',
+    logo: 'https://www.google.com/s2/favicons?domain=zayednationalmuseum.ae&sz=64',
+  },
+  {
+    name: 'ADGM',
+    href: 'https://www.adgm.com/',
+    logo: 'https://www.google.com/s2/favicons?domain=adgm.com&sz=64',
+  },
+  {
+    name: 'Abu Dhabi Finance Week',
+    href: 'https://www.adgm.com/events/abudhabifinanceweek',
+    logo: 'https://www.google.com/s2/favicons?domain=adgm.com&sz=64',
+  },
+  {
+    name: 'WAGMI Defense',
+    href: 'https://wagmigame.io/en',
+    logo: 'https://www.google.com/s2/favicons?domain=wagmigame.io&sz=64',
+  },
+  {
+    name: 'LMCC',
+    href: 'https://www.socallmcc.org/lmcc-app',
+    logo: 'https://www.google.com/s2/favicons?domain=socallmcc.org&sz=64',
+  },
+  {
+    name: 'Direct Macro',
+    href: 'https://directmacro.com/',
+    logo: 'https://www.google.com/s2/favicons?domain=directmacro.com&sz=64',
+  },
+  {
+    name: 'PartyShark',
+    href: 'https://www.cubix.co/work/party-shark/',
+    logo: 'https://www.google.com/s2/favicons?domain=cubix.co&sz=64',
+  },
 ];
 
 export const clientsLabel = 'Delivered across MENA, US & Europe';
