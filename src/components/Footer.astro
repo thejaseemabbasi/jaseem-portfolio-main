@@ -11,10 +11,26 @@ const services = (await getCollection('services'))
   .slice(0, 5);
 
 const certBadges = [
-  { code: 'CSM', issuer: 'Scrum Alliance', href: 'https://www.linkedin.com/in/jaseemabbasi/details/certifications/' },
-  { code: 'AI Fluency', issuer: 'Anthropic', href: 'https://www.linkedin.com/in/jaseemabbasi/details/certifications/' },
-  { code: 'PRC™', issuer: 'Product School', href: 'https://www.linkedin.com/in/jaseemabbasi/details/certifications/' },
-  { code: 'PMI', issuer: 'Agile & GenAI', href: 'https://www.credly.com/users/jaseem-abbasi/badges/credly' },
+  {
+    name: 'Certified ScrumMaster (CSM) — Scrum Alliance',
+    img: '/images/badges/csm.png',
+    href: 'https://www.linkedin.com/in/jaseemabbasi/details/certifications/',
+  },
+  {
+    name: 'AI Fluency Framework & Foundations — Anthropic',
+    img: '/images/badges/anthropic.png',
+    href: 'https://www.linkedin.com/in/jaseemabbasi/details/certifications/',
+  },
+  {
+    name: 'Product Roadmapping Micro-Certification (PRC™) — Product School',
+    img: '/images/badges/prc.png',
+    href: 'https://www.linkedin.com/in/jaseemabbasi/details/certifications/',
+  },
+  {
+    name: 'Generative AI & Agile Project Management — PMI',
+    img: '/images/badges/pmi.png',
+    href: 'https://www.credly.com/users/jaseem-abbasi/badges/credly',
+  },
 ];
 
 const legalLinks = footerNav.legal.filter((l) => l.label.toLowerCase() !== 'rss');
@@ -39,14 +55,14 @@ const year = new Date().getFullYear();
         {
           certBadges.map((b) => (
             <a
-              class="ftr-cert"
+              class="ftr-badge"
               href={b.href}
               target="_blank"
               rel="noopener noreferrer"
-              title={`${b.code} — ${b.issuer}`}
+              title={b.name}
+              aria-label={b.name}
             >
-              <span class="ftr-cert-code">{b.code}</span>
-              <span class="ftr-cert-issuer">{b.issuer}</span>
+              <img src={b.img} alt={b.name} width="56" height="56" loading="lazy" decoding="async" />
             </a>
           ))
         }
@@ -105,35 +121,25 @@ const year = new Date().getFullYear();
   .ftr-certs {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    align-items: center;
+    gap: 12px;
     margin-top: 18px;
   }
 
-  .ftr-cert {
+  .ftr-badge {
     display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 5px 10px;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    background: rgba(255, 255, 255, 0.04);
-    font-size: 12px;
-    line-height: 1.2;
-    text-decoration: none;
-    transition: border-color 0.15s ease, background 0.15s ease;
+    transition: transform 0.15s ease, opacity 0.15s ease;
   }
 
-  .ftr-cert:hover {
-    border-color: #c8f14d;
-    background: rgba(200, 241, 77, 0.08);
+  .ftr-badge:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
   }
 
-  .ftr-cert-code {
-    font-weight: 700;
-    color: #c8f14d;
-  }
-
-  .ftr-cert-issuer {
-    color: rgba(255, 255, 255, 0.72);
+  .ftr-badge img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    display: block;
   }
 </style>
