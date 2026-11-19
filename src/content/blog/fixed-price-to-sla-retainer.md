@@ -6,6 +6,7 @@ category: Practice
 readingTime: 5 min read
 author: Jaseem Abbasi
 tags: ['governance', 'sla', 'client-work']
+draft: true
 featured: true
 image:
   src: /images/journal-02.webp
