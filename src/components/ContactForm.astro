@@ -7,13 +7,13 @@ const connected = endpoint.length > 0;
 ---
 
 <form
+  id="contact-form"
   class="form"
   method="post"
   action={connected ? endpoint : undefined}
   name="contact"
   novalidate={false}
 >
-  <!-- Netlify Forms picks the form up from this attribute at build time. -->
   <input type="hidden" name="form-name" value="contact" />
 
   <div class="form-row">
@@ -60,7 +60,6 @@ const connected = endpoint.length > 0;
       placeholder="A short paragraph is plenty to get started."></textarea>
   </div>
 
-  <!-- Honeypot: hidden from people, irresistible to bots. -->
   <div class="hp" aria-hidden="true">
     <label for="cf-website">Leave this field empty</label>
     <input id="cf-website" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
@@ -77,7 +76,135 @@ const connected = endpoint.length > 0;
     )
   }
 
+  <p id="cf-error" class="form-note" hidden>
+    Something went wrong while sending your message. Please try again or email {siteConfig.contact.email} directly.
+  </p>
+
   <div>
     <Button type="submit" variant="ink" icon="mail" disabled={!connected}>Send message</Button>
   </div>
 </form>
+
+<dialog id="cf-thanks-modal" class="cf-modal" aria-labelledby="cf-modal-title">
+  <div class="cf-modal-box">
+    <span class="cf-modal-dot" aria-hidden="true">✓</span>
+    <h3 id="cf-modal-title">Thank you for reaching out!</h3>
+    <p>I’ve received your message and will get back to you shortly.</p>
+    <button type="button" id="cf-modal-close" class="cf-modal-btn">Close</button>
+  </div>
+</dialog>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const modal = document.getElementById('cf-thanks-modal') as HTMLDialogElement | null;
+  const closeBtn = document.getElementById('cf-modal-close');
+  const errorEl = document.getElementById('cf-error');
+
+  if (form && modal && closeBtn) {
+    const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+
+    const resetOnClose = () => {
+      form.reset();
+    };
+
+    modal.addEventListener('close', resetOnClose);
+    closeBtn.addEventListener('click', () => modal.close());
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) modal.close();
+    });
+
+    form.addEventListener('submit', async (e) => {
+      const action = form.getAttribute('action');
+      if (!action) return;
+
+      e.preventDefault();
+      if (errorEl) errorEl.hidden = true;
+      if (!form.reportValidity()) return;
+
+      if (submitBtn) submitBtn.disabled = true;
+
+      try {
+        const res = await fetch(action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+        if (res.ok) {
+          modal.showModal();
+        } else if (errorEl) {
+          errorEl.hidden = false;
+        }
+      } catch {
+        if (errorEl) errorEl.hidden = false;
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+      }
+    });
+  }
+</script>
+
+<style>
+  .cf-modal {
+    margin: auto;
+    border: 1px solid rgba(16, 17, 16, 0.12);
+    border-radius: 20px;
+    padding: 0;
+    max-width: 420px;
+    width: calc(100% - 32px);
+    background: #ffffff;
+    color: #101110;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+  }
+
+  .cf-modal::backdrop {
+    background: rgba(16, 17, 16, 0.55);
+    backdrop-filter: blur(4px);
+  }
+
+  .cf-modal-box {
+    padding: 32px 28px;
+    text-align: center;
+  }
+
+  .cf-modal-dot {
+    display: inline-grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    background: #c8f14d;
+    color: #101110;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .cf-modal-box h3 {
+    margin: 0 0 8px;
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  .cf-modal-box p {
+    margin: 0 0 24px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #5a5a54;
+  }
+
+  .cf-modal-btn {
+    cursor: pointer;
+    border: 0;
+    border-radius: 999px;
+    padding: 11px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    background: #101110;
+    color: #ffffff;
+    transition: opacity 0.15s ease;
+  }
+
+  .cf-modal-btn:hover {
+    opacity: 0.88;
+  }
+</style>
