@@ -6,7 +6,7 @@ category: Product
 excerpt: Three-sided mobile & web event marketplace with Stripe payouts
 description: Delivered a dual-interface marketplace connecting hosts, guests, and event vendors with Stripe flows and club leaderboards.
 image:
-  src: /images/project-console.webp
+  src: /images/partyshark.webp
   alt: PartyShark peer-to-peer event discovery and host management platform
   width: 900
   height: 675
