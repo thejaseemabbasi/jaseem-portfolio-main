@@ -5,7 +5,11 @@ year: '2026'
 category: Product
 excerpt: AI-powered digital asset management built for fixed event deadlines
 description: Led delivery of an AI-driven Digital Asset Management (DAM) system supporting high-volume media operations for Abu Dhabi Finance Week.
-artwork: identity
+image:
+  src: /images/adfw-dam.webp
+  alt: Abu Dhabi Finance Week AI Digital Asset Management platform
+  width: 900
+  height: 675
 services: ['Program delivery', 'Scope & WBS', 'AI workflow alignment']
 technologies: ['AI Indexing', 'DAM', 'Jira']
 results:
