@@ -19,7 +19,7 @@ const connected = endpoint.length > 0;
   <div class="form-row">
     <div class="field">
       <label for="cf-name">Your name</label>
-      <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="Robin Vale" />
+      <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="Your full name" />
     </div>
     <div class="field">
       <label for="cf-email">Email</label>
@@ -35,20 +35,21 @@ const connected = endpoint.length > 0;
   <div class="field">
     <label for="cf-type">What is this about?</label>
     <select id="cf-type" name="project_type">
-      <option value="art-direction">Art direction</option>
-      <option value="interface-design" selected>Interface design</option>
-      <option value="design-systems">Design systems</option>
-      <option value="identity">Identity</option>
-      <option value="site-build">Site build</option>
-      <option value="second-opinion">Second opinion</option>
+      <option value="full-time-role">Full-time role (PM / Scrum / Product)</option>
+      <option value="end-to-end-delivery" selected>End-to-end project delivery</option>
+      <option value="scrum-execution">Scrum execution &amp; sprint cadence</option>
+      <option value="product-discovery">Product discovery &amp; MVP strategy</option>
+      <option value="agile-transformation">Agile transformation &amp; process optimization</option>
+      <option value="presales-rfp">Presales, RFP &amp; commercial governance</option>
+      <option value="ai-delivery-ops">AI-assisted delivery operations</option>
       <option value="something-else">Something else</option>
     </select>
   </div>
 
   <div class="field">
-    <label for="cf-message">The brief</label>
+    <label for="cf-message">Project or role details</label>
     <p class="hint" id="cf-message-hint">
-      What is broken, who it is breaking for, and what happens if it stays that way.
+      Share the scope, team setup, timeline, or delivery challenge you’re looking to solve.
     </p>
     <textarea
       id="cf-message"
@@ -56,7 +57,7 @@ const connected = endpoint.length > 0;
       rows="7"
       required
       aria-describedby="cf-message-hint"
-      placeholder="A paragraph is plenty to start with."></textarea>
+      placeholder="A short paragraph is plenty to get started."></textarea>
   </div>
 
   <!-- Honeypot: hidden from people, irresistible to bots. -->
@@ -77,6 +78,6 @@ const connected = endpoint.length > 0;
   }
 
   <div>
-    <Button type="submit" variant="ink" icon="mail" disabled={!connected}>Send the brief</Button>
+    <Button type="submit" variant="ink" icon="mail" disabled={!connected}>Send message</Button>
   </div>
 </form>
