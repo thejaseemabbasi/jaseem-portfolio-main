@@ -20,6 +20,7 @@ results:
   - value: '0'
     label: Manual price updates required post-launch
 featured: true
+draft: true
 order: 6
 ---
 
