@@ -5,7 +5,11 @@ year: '2025'
 category: Web
 excerpt: Migrated 5,000+ pages across five institutional sites to Optimizely DXP
 description: Directed a $1M+ multi-site migration onto Optimizely DXP with a 25+ specialist team, transitioning into an SLA-governed retainer.
-artwork: dashboard
+image:
+  src: /images/adgm-dxp.webp
+  alt: Abu Dhabi Global Market multi-site platform
+  width: 900
+  height: 675
 services: ['Enterprise migration', 'Agile & Scrum', 'SLA governance']
 technologies: ['Optimizely DXP', 'Azure DevOps', 'SLA Tracking']
 results:
