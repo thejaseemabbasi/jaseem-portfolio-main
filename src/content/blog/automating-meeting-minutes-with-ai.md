@@ -8,11 +8,10 @@ author: Jaseem Abbasi
 tags: ['ai-ops', 'automation', 'delivery']
 featured: true
 image:
-  src: /images/journal-03.webp
-  alt: A small team in discussion around a table in a bright office
+  src: /images/journal-ai-minutes.webp
+  alt: Make.com, Jotform, Google Docs, Gemini AI, and Google Sheets meeting minutes automation
   width: 800
-  height: 550
----
+  height: 550---
 
 Project leaders lose hours every week rewriting meeting notes, extracting action items, and formatting follow-ups. The goal of automating minutes is not to replace judgment—it is to remove repetitive formatting so you can review decisions in two minutes instead of thirty.
 
