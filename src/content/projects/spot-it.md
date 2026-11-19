@@ -19,8 +19,8 @@ results:
     label: Live spot availability and instant booking
   - value: '2-sided'
     label: Driver booking flow and owner listing tools
-featured: false
-order: 8
+featured: true
+order: 5
 ---
 
 ## The challenge
