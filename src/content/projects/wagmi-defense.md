@@ -6,7 +6,7 @@ category: Product
 excerpt: Scaled a $1M+ mobile & Web3 game from fixed-price MVP to 20K+ downloads
 description: Led cross-functional game and Web3 delivery alongside former EA, Call of Duty, and Apple executives.
 image:
-  src: /images/project-console.webp
+  src: /images/wagmi-defense.webp
   alt: WAGMI Defense mobile strategy game and live ops showcase
   width: 900
   height: 675
