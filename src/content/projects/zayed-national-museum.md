@@ -6,7 +6,7 @@ category: Web
 excerpt: Seven-language Sitecore CMS website and companion iOS/Android apps shipped on budget
 description: End-to-end delivery across a flagship cultural institution's seven-language Sitecore CMS platform and mobile apps.
 image:
-  src: /images/project-site.webpsrc: /images/zayed-national-museum.webp
+  src: /images/zayed-national-museum.webp
   alt: Zayed National Museum multi-language Sitecore platform and mobile app showcase
   width: 900
   height: 675
