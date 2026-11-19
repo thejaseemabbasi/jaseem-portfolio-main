@@ -19,7 +19,7 @@ results:
     label: Delivered against non-negotiable event milestones
   - value: 'ADGM'
     label: Built for institutional media operations
-featured: true
+featured: false
 order: 5
 ---
 
