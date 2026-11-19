@@ -6,6 +6,7 @@ category: Product
 readingTime: 4 min read
 author: Jaseem Abbasi
 tags: ['localization', 'scoping', 'cms']
+draft: true
 featured: true
 image:
   src: /images/reel-poster.webp
