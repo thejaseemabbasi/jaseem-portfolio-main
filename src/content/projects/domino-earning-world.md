@@ -19,8 +19,8 @@ results:
     label: Core F2P game shipped first, followed by NFT marketplace
   - value: 'Web3'
     label: Customizable, rentable, and leasable NFT avatar system
-featured: false
-order: 9
+featured: true
+order: 6
 ---
 
 ## The challenge
