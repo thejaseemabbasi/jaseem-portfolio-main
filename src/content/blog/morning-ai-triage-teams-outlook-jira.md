@@ -8,7 +8,7 @@ author: Jaseem Abbasi
 tags: ['ai-ops', 'teams', 'jira']
 featured: true
 image:
-  src: /images/journal-02.webp
+  src: /images/journal-morning-brief.webp
   alt: A laptop, notebook and espresso cup on a wooden table seen from above
   width: 800
   height: 550
