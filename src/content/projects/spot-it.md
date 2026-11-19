@@ -6,7 +6,7 @@ category: Product
 excerpt: Real-time peer-to-peer parking marketplace shipped in 6–8 months
 description: Led Agile delivery for a real-time mobile marketplace connecting drivers with available parking spaces and secure in-app payments.
 image:
-  src: /images/project-print.webp
+  src: /images/spotit.webp
   alt: Spot It real-time peer-to-peer parking marketplace mobile interface
   width: 900
   height: 675
