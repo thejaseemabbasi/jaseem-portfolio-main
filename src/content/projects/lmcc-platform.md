@@ -6,7 +6,7 @@ category: Product
 excerpt: Standardized PRDs and KPI dashboards, lifting workflow efficiency by 70%
 description: Led product and project delivery for a labor-relations mobile and web platform across iOS, Android, and Web.
 image:
-  src: /images/project-print.webp
+  src: /images/lmcc-platform.webp
   alt: LMCC labor-relations mobile and web platform overview
   width: 900
   height: 675
