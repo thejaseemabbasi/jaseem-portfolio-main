@@ -24,7 +24,7 @@ export const siteConfig: SiteConfig = {
     phoneHref: '+923331335258',
     location: 'Karachi, Pakistan — Remote across MENA, US & EU',
     availability: 'Available for Senior PM, Scrum & Product Leadership',
-    formEndpoint: '',
+    formEndpoint: 'https://formspree.io/f/xoedlazv',
   },
 
   social: [
